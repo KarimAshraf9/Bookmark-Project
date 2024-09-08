@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookmark</title>
+
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header
+      class="d-flex align-items-center vh-100 justify-content-center w-100"
+    >
+      <div class="container d-flex flex-column">
+        <div class="title d-flex justify-content-center mb-5">
+          <h1>Bookmarker</h1>
+        </div>
+
+        <div class="bookMark py-4 border border-start-0 border-end-0">
+          <h2 class="text-center">
+            <i class="fa-regular fa-bookmark"></i> Bookmark your favorite sites
+            <i class="fa-regular fa-bookmark"></i>
+          </h2>
+          <div class="bookMarkInputs">
+            <label for="Input1" class="form-label"
+              ><i class="fa-solid fa-book-bookmark me-2"></i>Site Name</label
+            >
+            <input
+              type="text"
+              class="form-control mb-4 border-1 border-white"
+              id="Input1"
+              placeholder="Bookmark Name"
+            />
+            <label for="Input2" class="form-label"
+              ><i class="fa-solid fa-link me-2"></i>Site URL</label
+            >
+            <input
+              type="url"
+              class="form-control border-1 border-white"
+              id="Input2"
+              placeholder="www.google.com"
+            />
+          </div>
+          <div class="text-center">
+            <button
+              onclick="saveBookMark()"
+              class="btn btn-danger mt-4 border-1"
+              id="vip"
+            >
+              Submit
+            </button>
+          </div>
+        </div>
+
+        <div class="summary mt-4">
+          <table class="table text-center overflow-x-auto mb-0 overflow-x-">
+            <thead>
+              <tr class="text-center">
+                <th id="columnWidth1">Index</th>
+                <th id="columnWidth">Website Name</th>
+                <th id="columnWidth">Visit</th>
+                <th id="columnWidth">Delete</th>
+                <th id="columnWidth">Update</th>
+              </tr>
+            </thead>
+            <tbody id="tableBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </header>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
