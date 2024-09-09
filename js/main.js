@@ -11,7 +11,7 @@ if (localStorage.getItem("Data") != null) {
 
 function saveBookMark() {
   if (validateInputs()) {
-    if (document.getElementById("vip").innerHTML == "Submit") {
+    if (document.getElementById("vip").innerHTML.trim() === "Submit") {
       var bookMarkObject = {
         name: siteNameInput.value,
         link: siteUrlInput.value,
@@ -19,7 +19,7 @@ function saveBookMark() {
 
       bookMarkArray.push(bookMarkObject);
       console.log(bookMarkArray);
-    } else if (document.getElementById("vip").innerHTML == "Update") {
+    } else if (document.getElementById("vip").innerHTML.trim() == "Update") {
       bookMarkArray[updateIndex].name = siteNameInput.value;
       bookMarkArray[updateIndex].link = siteUrlInput.value;
       document.getElementById("vip").innerHTML = "Submit";
